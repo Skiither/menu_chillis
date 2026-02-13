@@ -1,6 +1,6 @@
 /* ======================
 RESET
-====================== */
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -10,19 +10,21 @@ RESET
 
 body {
     background: #f5f5f5;
+    transition: margin-top 0.3s ease; /* permite empurrar o conteúdo */
 }
 
 /* ======================
 LAYOUT PRINCIPAL
-====================== */
+===================== */
 .container {
     display: flex;
     min-height: 100vh;
+    transition: margin-top 0.3s ease;
 }
 
 /* ======================
-MENU LATERAL (DESKTOP)
-====================== */
+SIDEBAR / MENU
+===================== */
 .sidebar {
     width: 220px;
     background: #111;
@@ -57,10 +59,12 @@ MENU LATERAL (DESKTOP)
     margin: 0 auto 20px;
 }
 
-/* Google Translate Container */
+/* ======================
+GOOGLE TRANSLATE
+===================== */
 #google_translate_element {
     margin-bottom: 20px;
-    text-align: center; /* centraliza o dropdown */
+    text-align: center;
 }
 
 #google_translate_element select {
@@ -77,29 +81,37 @@ MENU LATERAL (DESKTOP)
     background: #333;
 }
 
-.goog-te-banner-frame {
-    display: none !important; /* esconde a faixa de topo do Google */
+.goog-te-gadget-simple {
+    background-color: #222 !important;
+    border: 1px solid #444 !important;
+    padding: 5px !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+}
+
+.goog-te-gadget-simple a, .goog-te-menu-value span {
+    color: white !important;
+    text-decoration: none !important;
 }
 
 /* ======================
 CONTEÚDO
-====================== */
+===================== */
 .content {
     flex: 1;
     padding: 30px;
 }
 
-/* GRID DE PRODUTOS */
+/* ======================
+GRID DE PRODUTOS / CARDS
+===================== */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 25px;
-    align-items: start; /* garante que todos os cards comecem no topo */
+    align-items: start;
 }
 
-/* ======================
-CARD
-====================== */
 .card {
     background: white;
     border-radius: 12px;
@@ -107,14 +119,14 @@ CARD
     box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    height: 100%; /* deixa o card crescer com o conteúdo */
+    height: 100%;
 }
 
 .card img {
-    width: 100%;               /* ocupa toda largura do card */
-    aspect-ratio: 4/3;         /* força proporção 4:3 */
-    object-fit: cover;         /* mantém proporção e corta excesso */
-    object-position: center;   /* centraliza o corte */
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -134,22 +146,20 @@ CARD
     margin: 10px 15px 20px;
 }
 
-/* Para múltiplos preços / variações */
 .card .prices {
     list-style: none;
     padding: 0 15px 15px 15px;
-    margin: 0;
 }
 
 .card .prices li {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #111; /* ou outra cor que combine */
+    color: #111;
 }
 
 /* ======================
 SEÇÕES
-====================== */
+===================== */
 .section {
     display: none;
 }
@@ -159,37 +169,36 @@ SEÇÕES
 }
 
 /* ======================
-BOTÃO MENU (DESKTOP ESCONDIDO)
-====================== */
+BOTÃO MOBILE
+===================== */
 .mobile-menu-btn {
     display: none;
+    position: fixed; /* mantém no topo da tela */
+    top: 15px; /* será ajustado dinamicamente pelo JS */
+    right: 15px;
+    z-index: 1001;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: top 0.3s ease; /* desliza suavemente */
 }
 
 /* ======================
 RESPONSIVO / MOBILE
-====================== */
+===================== */
 @media(max-width: 768px){
 
-    /* Botão do menu */
     .mobile-menu-btn {
         display: block;
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        z-index: 1001;
-        background: #111;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        font-size: 18px;
-        border-radius: 6px;
-        cursor: pointer;
     }
 
-    /* Sidebar deslizante */
     .sidebar {
         position: fixed;
-        left: -250px; /* escondido inicialmente */
+        left: -250px;
         top: 0;
         height: 100%;
         width: 230px;
@@ -202,24 +211,19 @@ RESPONSIVO / MOBILE
         left: 0;
     }
 
-    /* Conteúdo ocupa tela toda */
     .content {
         padding: 20px;
         width: 100%;
     }
-
-} /* ← fim media query */
+}
 
 /* ======================
-SESSÕES / ESPAÇAMENTO
-====================== */
+OUTROS AJUSTES
+===================== */
 .sessao {
     padding-bottom: 20px;
 }
 
-/* ======================
-BOTÃO MENU QUANDO ABERTO
-====================== */
 body.menu-open .mobile-menu-btn {
     display: none;
 }

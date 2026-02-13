@@ -345,21 +345,20 @@
     </div>
 </div>
 
-<!-- SCRIPT -->
 <script>
 const sidebar = document.querySelector('.sidebar');
 const menuBtn = document.querySelector('.mobile-menu-btn');
 
 /* ======================
 FUNÇÃO MOBILE CHECK
-====================== */
+===================== */
 function isMobile() {
     return window.innerWidth <= 768;
 }
 
 /* ======================
 ABRIR / FECHAR MENU
-====================== */
+===================== */
 function toggleMenu() {
     sidebar.classList.toggle('show');
     document.body.classList.toggle('menu-open');
@@ -367,7 +366,7 @@ function toggleMenu() {
 
 /* ======================
 FECHAR MENU
-====================== */
+===================== */
 function closeMenu(){
     sidebar.classList.remove('show');
     document.body.classList.remove('menu-open');
@@ -375,12 +374,9 @@ function closeMenu(){
 
 /* ======================
 TROCAR SEÇÃO E LAZY LOAD IMAGENS
-====================== */
+===================== */
 function showSection(id) {
-    // esconde todas as seções
     document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-
-    // mostra a seção selecionada
     const section = document.getElementById(id);
     if(section) section.classList.add('active');
 
@@ -389,7 +385,7 @@ function showSection(id) {
     const activeBtn = document.querySelector(`.sidebar button[onclick="showSection('${id}')"]`);
     if(activeBtn) activeBtn.classList.add('active');
 
-    // lazy load: carrega apenas imagens da seção ativa
+    // lazy load imagens da seção ativa
     if(section){
         const lazyImages = section.querySelectorAll('img.lazy');
         lazyImages.forEach(img => {
@@ -399,7 +395,6 @@ function showSection(id) {
         });
     }
 
-    // fecha menu mobile
     if(isMobile()){
         closeMenu();
     }
@@ -407,7 +402,7 @@ function showSection(id) {
 
 /* ======================
 FECHAR MENU AO CLICAR FORA (MOBILE)
-====================== */
+===================== */
 document.addEventListener('click', function(e){
     if(!isMobile()) return;
     if(!sidebar.classList.contains('show')) return;
@@ -421,8 +416,8 @@ document.addEventListener('click', function(e){
 });
 
 /* ======================
-GOOGLE TRANSLATE
-====================== */
+GOOGLE TRANSLATE + EMPURRAR LAYOUT
+===================== */
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'pt',
@@ -430,21 +425,28 @@ function googleTranslateElementInit() {
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 
-    // remove faixa azul sempre que trocar idioma
-    const observer = new MutationObserver(() => {
+    function adjustLayout() {
         const iframe = document.querySelector('.goog-te-banner-frame.skiptranslate');
-        if(iframe) iframe.style.display = 'none';
-        document.body.style.top = '0px';
-    });
+        const barHeight = iframe ? iframe.offsetHeight : 0;
+        document.body.style.marginTop = barHeight + 'px';
+        menuBtn.style.top = (15 + barHeight) + 'px';
+        if(iframe) iframe.style.display = 'none'; // esconde a faixa azul
+    }
 
+    // Observa alterações contínuas (quando Google traduz muda)
+    const observer = new MutationObserver(adjustLayout);
     observer.observe(document.body, { childList: true, subtree: true });
+
+    // Atualiza sempre que a tela for redimensionada
+    window.addEventListener('resize', adjustLayout);
+
+    // Atualiza de imediato caso o iframe já exista
+    setTimeout(adjustLayout, 500);
 }
 
-
 </script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<!-- Google Translate Script -->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
