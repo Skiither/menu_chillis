@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu - Chillis Tex Mex</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button class="mobile-menu-btn" onclick="toggleMenu()">☰ Menu</button>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <img src="./imagens/Logo.png" alt="Chillis Tex-Mex" class="logo">
+        <!-- Google Translate -->
+        <div id="google_translate_element"></div>
+
+        <!-- BOTÕES MENU -->
+        <button class="active" onclick="showSection('menu_infantil')">Menu infantil</button>
+        <button onclick="showSection('entradas')">Entradas</button>
+        <button onclick="showSection('principais')">Pratos Principais</button>
+        <button onclick="showSection('sobremesas')">Sobremesas</button>
+        <button onclick="showSection('bebidas')">Bebidas</button>
+        <button onclick="showSection('cocktails')">Cocktails</button>
+        <button onclick="showSection('vinhos')">Vinhos</button>
+    </aside>
+
+    <div class="content">
+
+        <!-- MENU INFANTIL -->
+        <section id="menu_infantil" class="section active">
+            <h2 class="sessao">Menu Infantil</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENTRADAS -->
+        <section id="entradas" class="section">
+            <h2 class="sessao">Entradas</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="./imagens/entradas/quesadilla-min.jpg" src="./imagens/entradas/quesadilla-min.jpg" class="lazy">
+                    <h3>Quesadilla</h3>
+                    <p>Tortilha recheada com Queijo, Chourição, Milho (Unidade)</p>
+                    <p>Quesadilla vegan: Tortilha recheada com legumes salteados (Unidade)</p>
+                    <div class="price">1,10€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/entradas/chillis-best-min.jpg" src="./imagens/entradas/chillis-best-min.jpg" class="lazy">
+                    <h3>Chilli's Best</h3>
+                    <p>Variação de entradas para duas pessoas</p>
+                    <div class="price">12,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/entradas/onion-rings.png" src="./imagens/entradas/onion-rings.png" class="lazy">
+                    <h3>Onion Rings</h3>
+                    <p>Rodelas de cebola panadas acompanhadas com Guacamole</p>
+                    <div class="price">5,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/entradas/nachos-min.jpg" src="./imagens/entradas/nachos-min.jpg" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Nachos envolvidos com jalapeños cobertos de queijo gratinado acompanhados com molho Sour Cream</p>
+                    <div class="price">8,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/entradas/chilli-popoers.png" src="./imagens/entradas/chilli-popoers.png" class="lazy">
+                    <h3>Chilli Poppers</h3>
+                    <p>Almofadinhas de Jalapeño panadas, recheadas com queijo creme CHILLI POPPERS acompanhadas com molho Sour Cream</p>
+                    <div class="price">5,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Nachos</h3>
+                    <p>Tortilhas crocantes com queijo.</p>
+                    <div class="price">6,90€</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRINCIPAIS -->
+        <section id="principais" class="section">
+            <h2 class="sessao">Principais</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="./imagens/pratos principais/bulls-eye-burger-min.jpg" src="./imagens/pratos principais/bulls-eye-burger-min.jpg" class="lazy">
+                    <h3>Bull's Eye Burguer</h3>
+                    <p>Hamburger de vaca com o nosso molho Dallas recheada com queijo bacon, pickles e alface, acompanhada com batata Fry N`Dip</p>
+                    <div class="price">15,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/pratos principais/francxicana.jpg" src="./imagens/pratos principais/francxicana.jpg" class="lazy">
+                    <h3>Francxicana</h3>
+                    <p>Tortilha recheada acompanhada do nosso molho e batata frita</p>
+                    <ul class="prices">
+                        <li>Vegetariana: 13,50€</li>
+                        <li>Frango: 13,50€</li>
+                        <li>Lombo de boi: 16,40€</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Burger Tex Mex</h3>
+                    <p>Hambúrguer artesanal com molho especial.</p>
+                    <div class="price">14,90€</div>
+                </div>
+                <!-- Repita os outros 4 burgers Tex Mex -->
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Burger Tex Mex</h3>
+                    <p>Hambúrguer artesanal com molho especial.</p>
+                    <div class="price">14,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Burger Tex Mex</h3>
+                    <p>Hambúrguer artesanal com molho especial.</p>
+                    <div class="price">14,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Burger Tex Mex</h3>
+                    <p>Hambúrguer artesanal com molho especial.</p>
+                    <div class="price">14,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Burger Tex Mex</h3>
+                    <p>Hambúrguer artesanal com molho especial.</p>
+                    <div class="price">14,90€</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBREMESAS -->
+        <section id="sobremesas" class="section">
+            <h2 class="sessao">Sobremesas</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="./imagens/sobremesas/churritos-min.jpg" src="./imagens/sobremesas/churritos-min.jpg" class="lazy">
+                    <h3>Churritos (2 pessoas)</h3>
+                    <p>6 churros quentes envolvidos em açúcar e canela para molhar nos nossos molhos, é de lamber os dedos <br>  (Dulce de Leche)</p>
+                    <div class="price">11,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/sobremesas/el-surpresa-min.jpg" src="./imagens/sobremesas/el-surpresa-min.jpg" class="lazy">
+                    <h3>La sorpresa (2 pessoas)</h3>
+                    <p>Variação de sobremesas para duas pessoas</p>
+                    <div class="price">11,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Churros</h3>
+                    <p>Com doce de leite.</p>
+                    <div class="price">5,90€</div>
+                </div>
+                <!-- Repita os outros churros -->
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Churros</h3>
+                    <p>Com doce de leite.</p>
+                    <div class="price">5,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Churros</h3>
+                    <p>Com doce de leite.</p>
+                    <div class="price">5,90€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Churros</h3>
+                    <p>Com doce de leite.</p>
+                    <div class="price">5,90€</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEBIDAS -->
+        <section id="bebidas" class="section">
+            <h2 class="sessao">Bebidas</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="./imagens/Bebidas/agua.png" src="./imagens/Bebidas/agua.png" class="lazy">
+                    <h3>Água vitalis</h3>
+                    <div class="price">2,20€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/Bebidas/agua com gas.jpg" src="./imagens/Bebidas/agua com gas.jpg" class="lazy">
+                    <h3>Água com gás</h3>
+                    <div class="price">1,70€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/Bebidas/coca cola.webp" src="./imagens/Bebidas/coca cola.webp" class="lazy">
+                    <h3>Coca-Cola</h3>
+                    <div class="price">2,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COCKTAILS -->
+        <section id="cocktails" class="section">
+            <h2 class="sessao">Cocktails</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="./imagens/Bebidas/pinacolada.jpg" src="./imagens/Bebidas/pinacolada.jpg" class="lazy">
+                    <h3>Piña Colada</h3>
+                    <p>Cocktail exótico com Malibu, ananás e leite de côco</p>
+                    <div class="price">9,80€</div>
+                </div>
+                <div class="card">
+                    <img data-src="./imagens/Bebidas/tequilasunrise.jpg" src="./imagens/Bebidas/tequilasunrise.jpg" class="lazy">
+                    <h3>Tequila sunrise</h3>
+                    <p>Tequila silver com sumo de laranja e groselha. O nosso por do sol </p>
+                    <ul class="prices">
+                        <li>7,50€</li>
+                        <li>Sem Álcool: 5,00€</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VINHOS -->
+        <section id="vinhos" class="section">
+            <h2 class="sessao">Vinhos</h2>
+            <div class="products">
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+                <div class="card">
+                    <img data-src="https://picsum.photos/400/300" src="https://picsum.photos/10/10" class="lazy">
+                    <h3>Margarita</h3>
+                    <p>Tequila, limão e gelo.</p>
+                    <div class="price">7,50€</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+const sidebar = document.querySelector('.sidebar');
+const menuBtn = document.querySelector('.mobile-menu-btn');
+
+/* ======================
+FUNÇÃO MOBILE CHECK
+====================== */
+function isMobile() {
+    return window.innerWidth <= 768;
+}
+
+/* ======================
+ABRIR / FECHAR MENU
+====================== */
+function toggleMenu() {
+    sidebar.classList.toggle('show');
+    document.body.classList.toggle('menu-open');
+}
+
+/* ======================
+FECHAR MENU
+====================== */
+function closeMenu(){
+    sidebar.classList.remove('show');
+    document.body.classList.remove('menu-open');
+}
+
+/* ======================
+TROCAR SEÇÃO E LAZY LOAD IMAGENS
+====================== */
+function showSection(id) {
+    // esconde todas as seções
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+
+    // mostra a seção selecionada
+    const section = document.getElementById(id);
+    if(section) section.classList.add('active');
+
+    // atualiza botão ativo
+    document.querySelectorAll('.sidebar button').forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.querySelector(`.sidebar button[onclick="showSection('${id}')"]`);
+    if(activeBtn) activeBtn.classList.add('active');
+
+    // lazy load: carrega apenas imagens da seção ativa
+    if(section){
+        const lazyImages = section.querySelectorAll('img.lazy');
+        lazyImages.forEach(img => {
+            if(img.dataset.src && !img.src){
+                img.src = img.dataset.src;
+            }
+        });
+    }
+
+    // fecha menu mobile
+    if(isMobile()){
+        closeMenu();
+    }
+}
+
+/* ======================
+FECHAR MENU AO CLICAR FORA (MOBILE)
+====================== */
+document.addEventListener('click', function(e){
+    if(!isMobile()) return;
+    if(!sidebar.classList.contains('show')) return;
+
+    const clicouNoMenu = sidebar.contains(e.target);
+    const clicouNoBotao = menuBtn.contains(e.target);
+
+    if(!clicouNoMenu && !clicouNoBotao){
+        closeMenu();
+    }
+});
+
+/* ======================
+GOOGLE TRANSLATE
+====================== */
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'en,de,es,fr,it',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+
+    // remove faixa azul sempre que trocar idioma
+    const observer = new MutationObserver(() => {
+        const iframe = document.querySelector('.goog-te-banner-frame.skiptranslate');
+        if(iframe) iframe.style.display = 'none';
+        document.body.style.top = '0px';
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+}
+
+
+</script>
+
+<!-- Google Translate Script -->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

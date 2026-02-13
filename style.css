@@ -1,0 +1,225 @@
+/* ======================
+RESET
+====================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* ======================
+LAYOUT PRINCIPAL
+====================== */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ======================
+MENU LATERAL (DESKTOP)
+====================== */
+.sidebar {
+    width: 220px;
+    background: #111;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0; /* evita encolher */
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+    background: #333;
+}
+
+/* LOGO */
+.sidebar img.logo {
+    width: 110px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Google Translate Container */
+#google_translate_element {
+    margin-bottom: 20px;
+    text-align: center; /* centraliza o dropdown */
+}
+
+#google_translate_element select {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#google_translate_element select:hover {
+    background: #333;
+}
+
+.goog-te-banner-frame {
+    display: none !important; /* esconde a faixa de topo do Google */
+}
+
+/* ======================
+CONTEÚDO
+====================== */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* GRID DE PRODUTOS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    align-items: start; /* garante que todos os cards comecem no topo */
+}
+
+/* ======================
+CARD
+====================== */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* deixa o card crescer com o conteúdo */
+}
+
+.card img {
+    width: 100%;               /* ocupa toda largura do card */
+    aspect-ratio: 4/3;         /* força proporção 4:3 */
+    object-fit: cover;         /* mantém proporção e corta excesso */
+    object-position: center;   /* centraliza o corte */
+    display: block;
+}
+
+.card h3 {
+    margin: 15px 15px 5px;
+}
+
+.card p {
+    margin: 0 15px 10px;
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 15px 20px;
+}
+
+/* Para múltiplos preços / variações */
+.card .prices {
+    list-style: none;
+    padding: 0 15px 15px 15px;
+    margin: 0;
+}
+
+.card .prices li {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #111; /* ou outra cor que combine */
+}
+
+/* ======================
+SEÇÕES
+====================== */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+/* ======================
+BOTÃO MENU (DESKTOP ESCONDIDO)
+====================== */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* ======================
+RESPONSIVO / MOBILE
+====================== */
+@media(max-width: 768px){
+
+    /* Botão do menu */
+    .mobile-menu-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+        background: #111;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /* Sidebar deslizante */
+    .sidebar {
+        position: fixed;
+        left: -250px; /* escondido inicialmente */
+        top: 0;
+        height: 100%;
+        width: 230px;
+        background: #111;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    /* Conteúdo ocupa tela toda */
+    .content {
+        padding: 20px;
+        width: 100%;
+    }
+
+} /* ← fim media query */
+
+/* ======================
+SESSÕES / ESPAÇAMENTO
+====================== */
+.sessao {
+    padding-bottom: 20px;
+}
+
+/* ======================
+BOTÃO MENU QUANDO ABERTO
+====================== */
+body.menu-open .mobile-menu-btn {
+    display: none;
+}
